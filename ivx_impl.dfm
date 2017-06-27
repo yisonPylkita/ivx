@@ -2,7 +2,7 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 449
+  ClientHeight = 429
   ClientWidth = 941
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -154,7 +154,7 @@ object IvxForm: TIvxForm
     Width = 145
     Height = 21
     FileList = FilesList
-    Filter = 'All files (*.*)|*.*|JPEG files|*.jpg|*.jpeg'
+    Filter = 'JPEG files|*.jpg'
     TabOrder = 3
   end
   object FilesList: TFileListBox
@@ -163,6 +163,7 @@ object IvxForm: TIvxForm
     Width = 145
     Height = 360
     ItemHeight = 13
+    Mask = '*.jpg'
     TabOrder = 4
     OnClick = FileClick
   end
