@@ -2,8 +2,8 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 269
-  ClientWidth = 554
+  ClientHeight = 554
+  ClientWidth = 941
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,13 +17,11 @@ object IvxForm: TIvxForm
   object ToolBar: TToolBar
     Left = 0
     Top = 0
-    Width = 554
+    Width = 941
     Height = 29
     Caption = 'ToolBar'
     TabOrder = 0
-    ExplicitLeft = 64
-    ExplicitTop = 8
-    ExplicitWidth = 150
+    ExplicitWidth = 554
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
