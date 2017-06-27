@@ -10,6 +10,7 @@
 #include <Vcl.Menus.hpp>
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.ToolWin.hpp>
+#include <Vcl.FileCtrl.hpp>
 //---------------------------------------------------------------------------
 class TIvxForm : public TForm
 {
@@ -42,6 +43,10 @@ __published:	// IDE-managed Components
 	TToolButton *ToolButton14;
 	TToolButton *ToolButton15;
 	TToolButton *ToolButton16;
+	TDriveComboBox *DriveSelectBox;
+	TDirectoryListBox *DriveFoldersList;
+	TFilterComboBox *FilterComboBox1;
+	TFileListBox *FileListBox1;
 	void __fastcall Exit1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

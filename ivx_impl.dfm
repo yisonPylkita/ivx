@@ -2,7 +2,7 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 554
+  ClientHeight = 509
   ClientWidth = 941
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -126,6 +126,35 @@ object IvxForm: TIvxForm
       Caption = 'ToolButton16'
       ImageIndex = 11
     end
+  end
+  object DriveSelectBox: TDriveComboBox
+    Left = 0
+    Top = 24
+    Width = 145
+    Height = 19
+    TabOrder = 1
+  end
+  object DriveFoldersList: TDirectoryListBox
+    Left = 0
+    Top = 49
+    Width = 145
+    Height = 373
+    TabOrder = 2
+  end
+  object FilterComboBox1: TFilterComboBox
+    Left = 151
+    Top = 22
+    Width = 145
+    Height = 21
+    TabOrder = 3
+  end
+  object FileListBox1: TFileListBox
+    Left = 151
+    Top = 49
+    Width = 145
+    Height = 360
+    ItemHeight = 13
+    TabOrder = 4
   end
   object MainMenu: TMainMenu
     Left = 452
