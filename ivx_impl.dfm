@@ -134,21 +134,21 @@ object IvxForm: TIvxForm
     Height = 19
     TabOrder = 1
   end
-  object DriveFoldersList: TDirectoryListBox
+  object FoldersList: TDirectoryListBox
     Left = 0
     Top = 49
     Width = 145
     Height = 373
     TabOrder = 2
   end
-  object FilterComboBox1: TFilterComboBox
+  object FilesFilterBox: TFilterComboBox
     Left = 151
     Top = 22
     Width = 145
     Height = 21
     TabOrder = 3
   end
-  object FileListBox1: TFileListBox
+  object FilesList: TFileListBox
     Left = 151
     Top = 49
     Width = 145

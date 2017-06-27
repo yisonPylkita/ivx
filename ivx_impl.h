@@ -44,9 +44,9 @@ __published:	// IDE-managed Components
 	TToolButton *ToolButton15;
 	TToolButton *ToolButton16;
 	TDriveComboBox *DriveSelectBox;
-	TDirectoryListBox *DriveFoldersList;
-	TFilterComboBox *FilterComboBox1;
-	TFileListBox *FileListBox1;
+	TDirectoryListBox *FoldersList;
+	TFilterComboBox *FilesFilterBox;
+	TFileListBox *FilesList;
 	void __fastcall Exit1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
