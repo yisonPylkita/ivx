@@ -11,6 +11,10 @@
 #include <Vcl.ComCtrls.hpp>
 #include <Vcl.ToolWin.hpp>
 #include <Vcl.FileCtrl.hpp>
+#include <jpeg.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.ImgList.hpp>
+#include <Vcl.ExtCtrls.hpp>
 //---------------------------------------------------------------------------
 class TIvxForm : public TForm
 {
@@ -47,8 +51,11 @@ __published:	// IDE-managed Components
 	TDirectoryListBox *FoldersList;
 	TFilterComboBox *FilesFilterBox;
 	TFileListBox *FilesList;
+	TImage *MainImage;
 	void __fastcall Exit1Click(TObject *Sender);
+	void __fastcall FileClick(TObject *Sender);
 private:	// User declarations
+	TJPEGImage *openned_image;
 public:		// User declarations
 	__fastcall TIvxForm(TComponent* Owner);
 };

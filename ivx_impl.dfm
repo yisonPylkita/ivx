@@ -2,7 +2,7 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 469
+  ClientHeight = 449
   ClientWidth = 941
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,6 +14,12 @@ object IvxForm: TIvxForm
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object MainImage: TImage
+    Left = 302
+    Top = 49
+    Width = 639
+    Height = 400
+  end
   object ToolBar: TToolBar
     Left = 0
     Top = 0
@@ -135,7 +141,7 @@ object IvxForm: TIvxForm
     TabOrder = 1
   end
   object FoldersList: TDirectoryListBox
-    Left = 0
+    Left = -8
     Top = 49
     Width = 145
     Height = 373
@@ -158,6 +164,7 @@ object IvxForm: TIvxForm
     Height = 360
     ItemHeight = 13
     TabOrder = 4
+    OnClick = FileClick
   end
   object MainMenu: TMainMenu
     Left = 452
