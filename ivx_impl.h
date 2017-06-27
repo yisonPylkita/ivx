@@ -8,6 +8,8 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 #include <Vcl.Menus.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ToolWin.hpp>
 //---------------------------------------------------------------------------
 class TIvxForm : public TForm
 {
@@ -23,6 +25,23 @@ __published:	// IDE-managed Components
 	TMenuItem *Exit1;
 	TMenuItem *N1;
 	TMenuItem *N2;
+	TToolBar *ToolBar;
+	TToolButton *ToolButton1;
+	TToolButton *ToolButton2;
+	TToolButton *ToolButton3;
+	TToolButton *ToolButton4;
+	TToolButton *ToolButton5;
+	TToolButton *ToolButton6;
+	TToolButton *ToolButton7;
+	TToolButton *ToolButton8;
+	TToolButton *ToolButton9;
+	TToolButton *ToolButton10;
+	TToolButton *ToolButton11;
+	TToolButton *ToolButton12;
+	TToolButton *ToolButton13;
+	TToolButton *ToolButton14;
+	TToolButton *ToolButton15;
+	TToolButton *ToolButton16;
 	void __fastcall Exit1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
