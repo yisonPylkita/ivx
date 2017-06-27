@@ -2,7 +2,7 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 509
+  ClientHeight = 489
   ClientWidth = 941
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -21,7 +21,6 @@ object IvxForm: TIvxForm
     Height = 29
     Caption = 'ToolBar'
     TabOrder = 0
-    ExplicitWidth = 554
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -132,6 +131,7 @@ object IvxForm: TIvxForm
     Top = 24
     Width = 145
     Height = 19
+    DirList = FoldersList
     TabOrder = 1
   end
   object FoldersList: TDirectoryListBox
@@ -139,6 +139,7 @@ object IvxForm: TIvxForm
     Top = 49
     Width = 145
     Height = 373
+    FileList = FilesList
     TabOrder = 2
   end
   object FilesFilterBox: TFilterComboBox
@@ -146,6 +147,7 @@ object IvxForm: TIvxForm
     Top = 22
     Width = 145
     Height = 21
+    FileList = FilesList
     TabOrder = 3
   end
   object FilesList: TFileListBox
