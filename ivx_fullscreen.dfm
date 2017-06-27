@@ -13,9 +13,10 @@ object IvxFullscreen: TIvxFullscreen
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnKeyPress = KeyPress
   PixelsPerInch = 96
   TextHeight = 13
-  object Image1: TImage
+  object MainImage: TImage
     Left = 0
     Top = 0
     Width = 828

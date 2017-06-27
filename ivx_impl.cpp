@@ -4,6 +4,7 @@
 #pragma hdrstop
 
 #include "ivx_impl.h"
+#include "ivx_fullscreen.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -28,5 +29,17 @@ void __fastcall TIvxForm::FileClick(TObject *Sender)
 		return;
 	openned_image->LoadFromFile(file_path);
 	MainImage->Canvas->Draw(0, 0, openned_image);
+}
+
+void TIvxForm::ShowInFullscreen(const TJPEGImage *image)
+{
+	TIvxFullscreen *fullscreen_form = new TIvxFullscreen(this);
+	fullscreen_form->MainImage->Picture->Assign(image);
+    fullscreen_form->ShowModal();
+}
+
+void __fastcall TIvxForm::FullscreenButtonClick(TObject *Sender)
+{
+	ShowInFullscreen(openned_image);
 }
 

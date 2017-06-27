@@ -12,7 +12,8 @@
 class TIvxFullscreen : public TForm
 {
 __published:	// IDE-managed Components
-	TImage *Image1;
+	TImage *MainImage;
+	void __fastcall KeyPress(TObject *Sender, System::WideChar &Key);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TIvxFullscreen(TComponent* Owner);

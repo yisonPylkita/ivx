@@ -65,11 +65,11 @@ object IvxForm: TIvxForm
       ImageIndex = 5
       Style = tbsSeparator
     end
-    object ToolButton7: TToolButton
+    object FullscreenButton: TToolButton
       Left = 123
       Top = 0
-      Caption = 'ToolButton7'
       ImageIndex = 5
+      OnClick = FullscreenButtonClick
     end
     object ToolButton8: TToolButton
       Left = 146

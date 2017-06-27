@@ -37,7 +37,7 @@ __published:	// IDE-managed Components
 	TToolButton *ToolButton4;
 	TToolButton *ToolButton5;
 	TToolButton *ToolButton6;
-	TToolButton *ToolButton7;
+	TToolButton *FullscreenButton;
 	TToolButton *ToolButton8;
 	TToolButton *ToolButton9;
 	TToolButton *ToolButton10;
@@ -54,7 +54,9 @@ __published:	// IDE-managed Components
 	TImage *MainImage;
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall FileClick(TObject *Sender);
+	void __fastcall FullscreenButtonClick(TObject *Sender);
 private:	// User declarations
+	void ShowInFullscreen(const TJPEGImage *image);
 	TJPEGImage *openned_image;
 public:		// User declarations
 	__fastcall TIvxForm(TComponent* Owner);

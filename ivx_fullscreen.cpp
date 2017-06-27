@@ -14,3 +14,9 @@ __fastcall TIvxFullscreen::TIvxFullscreen(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TIvxFullscreen::KeyPress(TObject *Sender, System::WideChar &Key)
+{
+	if (Key == WideChar(27))
+		Close();
+}
+//---------------------------------------------------------------------------
