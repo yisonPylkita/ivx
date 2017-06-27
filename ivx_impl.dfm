@@ -45,6 +45,7 @@ object IvxForm: TIvxForm
       end
       object Exit1: TMenuItem
         Caption = 'E&xit'
+        OnClick = Exit1Click
       end
     end
   end

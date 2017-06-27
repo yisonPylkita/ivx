@@ -23,6 +23,7 @@ __published:	// IDE-managed Components
 	TMenuItem *Exit1;
 	TMenuItem *N1;
 	TMenuItem *N2;
+	void __fastcall Exit1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TIvxForm(TComponent* Owner);

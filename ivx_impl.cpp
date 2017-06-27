@@ -14,3 +14,9 @@ __fastcall TIvxForm::TIvxForm(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TIvxForm::Exit1Click(TObject *Sender)
+{
+    Application->Terminate();
+}
+//---------------------------------------------------------------------------
+
