@@ -134,7 +134,7 @@
             <BuildOrder>0</BuildOrder>
         </CppCompile>
         <CppCompile Include="ivx_impl.cpp">
-            <Form>Form1</Form>
+            <Form>IvxForm</Form>
             <FormType>dfm</FormType>
             <DependentOn>ivx_impl.h</DependentOn>
             <BuildOrder>2</BuildOrder>

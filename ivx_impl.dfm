@@ -1,7 +1,7 @@
-object Form1: TForm1
+object IvxForm: TIvxForm
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'ivx'
   ClientHeight = 289
   ClientWidth = 554
   Color = clBtnFace
