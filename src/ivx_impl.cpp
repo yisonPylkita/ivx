@@ -28,7 +28,7 @@ void __fastcall TIvxForm::FileClick(TObject *Sender)
 	if (!Sysutils::FileExists(file_path))
 		return;
 	openned_image->LoadFromFile(file_path);
-	MainImage->Canvas->Draw(0, 0, openned_image);
+	SetPicture(openned_image);
 }
 
 void TIvxForm::ShowInFullscreen(const TJPEGImage *image)
@@ -41,5 +41,15 @@ void TIvxForm::ShowInFullscreen(const TJPEGImage *image)
 void __fastcall TIvxForm::FullscreenButtonClick(TObject *Sender)
 {
 	ShowInFullscreen(openned_image);
+}
+
+void TIvxForm::SetPicture(const TJPEGImage *image)
+{
+	MainImage->Picture->Bitmap->Assign(image);
+}
+
+void TIvxForm::SetPicture(const TBitmap *image)
+{
+    MainImage->Picture->Bitmap->Assign(image);
 }
 

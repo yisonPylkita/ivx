@@ -56,6 +56,9 @@ __published:	// IDE-managed Components
 	void __fastcall FileClick(TObject *Sender);
 	void __fastcall FullscreenButtonClick(TObject *Sender);
 private:	// User declarations
+	void FillWithColor(TImage *image, TColor color);
+	void SetPicture(const TJPEGImage *image);
+	void SetPicture(const TBitmap *image);
 	void ShowInFullscreen(const TJPEGImage *image);
 	TJPEGImage *openned_image;
 public:		// User declarations

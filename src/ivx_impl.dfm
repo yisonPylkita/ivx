@@ -2,8 +2,8 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 429
-  ClientWidth = 941
+  ClientHeight = 620
+  ClientWidth = 1131
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,15 +15,15 @@ object IvxForm: TIvxForm
   PixelsPerInch = 96
   TextHeight = 13
   object MainImage: TImage
-    Left = 302
-    Top = 49
-    Width = 639
-    Height = 400
+    Left = 325
+    Top = 35
+    Width = 800
+    Height = 600
   end
   object ToolBar: TToolBar
     Left = 0
     Top = 0
-    Width = 941
+    Width = 1131
     Height = 29
     Caption = 'ToolBar'
     TabOrder = 0
