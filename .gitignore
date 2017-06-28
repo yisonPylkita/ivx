@@ -1,6 +1,7 @@
-__astcache
-__history
-ivx.cbproj.local
-Win32
+src/__astcache
+src/__history
+src/ivx.cbproj.local
+src/Win32
+src/ivx.stat
+src/ivx.res
 test_images
-*.stat
