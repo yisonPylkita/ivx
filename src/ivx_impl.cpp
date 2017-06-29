@@ -89,3 +89,11 @@ void __fastcall TIvxForm::FormShow(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TIvxForm::MainImgMouseMove(TObject *Sender, TShiftState Shift, int X,
+          int Y)
+{
+	StatusBar->Panels[0].Items[0]->Text =
+	"Mouse position: (" + IntToStr(X) + ", " + IntToStr(Y) + ")";
+}
+//---------------------------------------------------------------------------
+

@@ -53,10 +53,13 @@ __published:	// IDE-managed Components
 	TFileListBox *FilesList;
 	TImage *MainImage;
 	TPanel *Controls;
+	TStatusBar *StatusBar;
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall FileClick(TObject *Sender);
 	void __fastcall FullscreenButtonClick(TObject *Sender);
 	void __fastcall FormShow(TObject *Sender);
+	void __fastcall MainImgMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+
 private:	// User declarations
 	void FillWithColor(TImage *image, TColor color);
 	void SetPicture(TJPEGImage *image);

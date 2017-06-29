@@ -2,7 +2,7 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 505
+  ClientHeight = 465
   ClientWidth = 919
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,11 +19,12 @@ object IvxForm: TIvxForm
     Left = 299
     Top = 29
     Width = 620
-    Height = 476
+    Height = 417
     Align = alClient
     Proportional = True
     Stretch = True
     Transparent = True
+    OnMouseMove = MainImgMouseMove
     ExplicitLeft = 320
     ExplicitTop = 49
     ExplicitWidth = 272
@@ -36,7 +37,6 @@ object IvxForm: TIvxForm
     Height = 29
     Caption = 'ToolBar'
     TabOrder = 0
-    ExplicitWidth = 650
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -146,11 +146,10 @@ object IvxForm: TIvxForm
     Left = 0
     Top = 29
     Width = 299
-    Height = 476
+    Height = 417
     Align = alLeft
     Caption = 'Panel1'
     TabOrder = 1
-    ExplicitHeight = 434
     object DriveSelectBox: TDriveComboBox
       Left = 0
       Top = 0
@@ -186,6 +185,22 @@ object IvxForm: TIvxForm
       FileList = FilesList
       TabOrder = 3
     end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 446
+    Width = 919
+    Height = 19
+    Panels = <
+      item
+        Width = 150
+      end
+      item
+        Width = 100
+      end
+      item
+        Width = 50
+      end>
   end
   object MainMenu: TMainMenu
     Left = 452
