@@ -2,6 +2,7 @@
 
 #include <vcl.h>
 #pragma hdrstop
+#include <string>
 
 #include "ivx_impl.h"
 #include "ivx_fullscreen.h"
@@ -35,7 +36,24 @@ void TIvxForm::ShowInFullscreen(const TJPEGImage *image)
 {
 	TIvxFullscreen *fullscreen_form = new TIvxFullscreen(this);
 	fullscreen_form->MainImage->Picture->Assign(image);
-    fullscreen_form->ShowModal();
+	fullscreen_form->ShowModal();
+}
+
+TRect TIvxForm::AdjustSize(TJPEGImage *image, int width, int height)
+{
+	assert(image);
+	TRect rect;
+	rect.Left = 0;
+	rect.Top = 0;
+	if (image->Width > image->Height) {
+		rect.Right = width;
+		rect.Bottom = ((width * image->Height) / image->Width);
+	} else {
+		rect.Right = ((height * image->Width) / image->Height);
+		rect.Bottom = height;
+	}
+
+	return rect;
 }
 
 void __fastcall TIvxForm::FullscreenButtonClick(TObject *Sender)
@@ -43,13 +61,31 @@ void __fastcall TIvxForm::FullscreenButtonClick(TObject *Sender)
 	ShowInFullscreen(openned_image);
 }
 
-void TIvxForm::SetPicture(const TJPEGImage *image)
+void TIvxForm::SetPicture(TJPEGImage *image)
 {
-	MainImage->Picture->Bitmap->Assign(image);
+	// Clear MainImage
+	TBitmap *background = new TBitmap();
+	background->SetSize(MainImage->ClientRect.Right, MainImage->ClientRect.Bottom);
+	background->Canvas->Brush->Color = 0x0;
+	background->Canvas->FillRect(MainImage->ClientRect);
+	MainImage->Canvas->Draw(0, 0, background);
+
+   //	MainImage->ClientRect.SetHeight(image->Height);
+   //	MainImage->ClientRect.SetWidth(image->Width);
+//  MainImage->Canvas->Assign(background);
+
+	// Display image
+//	MainImage->Canvas->StretchDraw(MainImage->ClientRect, image);
+	TRect image_size = AdjustSize(image, MainImage->Width, MainImage->Height);
+	MainImage->Canvas->StretchDraw(image_size, image);
+//	MainImage->Canvas->Draw(0, 0, image);
 }
 
-void TIvxForm::SetPicture(const TBitmap *image)
+void __fastcall TIvxForm::FormShow(TObject *Sender)
 {
-    MainImage->Picture->Bitmap->Assign(image);
+//	FoldersList->Directory = "C:\\Projects\\test_images";
+	FoldersList->Directory = GetCurrentDir() + "..\\..\\..\\..\\test_images";
+
 }
+//---------------------------------------------------------------------------
 

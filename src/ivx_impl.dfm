@@ -2,8 +2,8 @@ object IvxForm: TIvxForm
   Left = 0
   Top = 0
   Caption = 'ivx'
-  ClientHeight = 620
-  ClientWidth = 1131
+  ClientHeight = 505
+  ClientWidth = 919
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,21 +12,31 @@ object IvxForm: TIvxForm
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object MainImage: TImage
-    Left = 325
-    Top = 35
-    Width = 800
-    Height = 600
+    Left = 299
+    Top = 29
+    Width = 620
+    Height = 476
+    Align = alClient
+    Proportional = True
+    Stretch = True
+    Transparent = True
+    ExplicitLeft = 320
+    ExplicitTop = 49
+    ExplicitWidth = 272
+    ExplicitHeight = 373
   end
   object ToolBar: TToolBar
     Left = 0
     Top = 0
-    Width = 1131
+    Width = 919
     Height = 29
     Caption = 'ToolBar'
     TabOrder = 0
+    ExplicitWidth = 650
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -132,40 +142,50 @@ object IvxForm: TIvxForm
       ImageIndex = 11
     end
   end
-  object DriveSelectBox: TDriveComboBox
+  object Controls: TPanel
     Left = 0
-    Top = 24
-    Width = 145
-    Height = 19
-    DirList = FoldersList
+    Top = 29
+    Width = 299
+    Height = 476
+    Align = alLeft
+    Caption = 'Panel1'
     TabOrder = 1
-  end
-  object FoldersList: TDirectoryListBox
-    Left = -8
-    Top = 49
-    Width = 145
-    Height = 373
-    FileList = FilesList
-    TabOrder = 2
-  end
-  object FilesFilterBox: TFilterComboBox
-    Left = 151
-    Top = 22
-    Width = 145
-    Height = 21
-    FileList = FilesList
-    Filter = 'JPEG files|*.jpg'
-    TabOrder = 3
-  end
-  object FilesList: TFileListBox
-    Left = 151
-    Top = 49
-    Width = 145
-    Height = 360
-    ItemHeight = 13
-    Mask = '*.jpg'
-    TabOrder = 4
-    OnClick = FileClick
+    ExplicitHeight = 434
+    object DriveSelectBox: TDriveComboBox
+      Left = 0
+      Top = 0
+      Width = 145
+      Height = 19
+      DirList = FoldersList
+      TabOrder = 0
+    end
+    object FilesFilterBox: TFilterComboBox
+      Left = 151
+      Top = 6
+      Width = 145
+      Height = 21
+      FileList = FilesList
+      Filter = 'JPEG files|*.jpg'
+      TabOrder = 1
+    end
+    object FilesList: TFileListBox
+      Left = 148
+      Top = 33
+      Width = 145
+      Height = 373
+      ItemHeight = 13
+      Mask = '*.jpg'
+      TabOrder = 2
+      OnClick = FileClick
+    end
+    object FoldersList: TDirectoryListBox
+      Left = 0
+      Top = 25
+      Width = 145
+      Height = 373
+      FileList = FilesList
+      TabOrder = 3
+    end
   end
   object MainMenu: TMainMenu
     Left = 452

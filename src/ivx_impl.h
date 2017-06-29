@@ -52,13 +52,15 @@ __published:	// IDE-managed Components
 	TFilterComboBox *FilesFilterBox;
 	TFileListBox *FilesList;
 	TImage *MainImage;
+	TPanel *Controls;
 	void __fastcall Exit1Click(TObject *Sender);
 	void __fastcall FileClick(TObject *Sender);
 	void __fastcall FullscreenButtonClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
 private:	// User declarations
 	void FillWithColor(TImage *image, TColor color);
-	void SetPicture(const TJPEGImage *image);
-	void SetPicture(const TBitmap *image);
+	void SetPicture(TJPEGImage *image);
+	TRect AdjustSize(TJPEGImage *image, int width, int height);
 	void ShowInFullscreen(const TJPEGImage *image);
 	TJPEGImage *openned_image;
 public:		// User declarations
